@@ -4,10 +4,11 @@ namespace App\Http\Middleware;
 
 use Closure;
 
-class RestrictIpMiddleware
+class IpMiddleware
 {
 
-    public $restrictIps = ['65.1.137.90', '127.0.0.1'];
+    public $restrictIps = [''];
+
     /**
      * Handle an incoming request.
      *
@@ -17,9 +18,6 @@ class RestrictIpMiddleware
      */
     public function handle($request, Closure $next)
     {
-        if (in_array($request->ip(), $this->restrictIps)) {
-            return response()->json(['message' => "You don't have permission to access this website."]);
-        }
         return $next($request);
     }
 }
