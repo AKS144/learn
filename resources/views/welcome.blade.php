@@ -85,7 +85,7 @@
                 </div>
 
                 <div class="links">
-                    <a>Hello Welcome</a>
+                    <a>Hello Welcome to Laravel</a>
                 </div>
             </div>
         </div>

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Log;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -12,6 +14,7 @@
 */
 
 Route::get('/', function () {
+    Log::info('hi');
     return view('welcome');
 });
 

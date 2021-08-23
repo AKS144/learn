@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
+        logger(message: 'hello');
         return view('home');
     }
 }
